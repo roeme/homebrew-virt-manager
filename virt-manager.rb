@@ -3,8 +3,8 @@ class VirtManager < Formula
 
   desc "App for managing virtual machines"
   homepage "https://virt-manager.org/"
-  url "https://virt-manager.org/download/sources/virt-manager/virt-manager-2.2.1.tar.gz"
-  sha256 "cfd88d66e834513e067b4d3501217e21352fadb673103bacb9e646da9f029a1b"
+  url "https://virt-manager.org/download/sources/virt-manager/virt-manager-3.2.0.tar.gz"
+  sha256 "2b6fe3d90d89e1130227e4b05c51e6642d89c839d3ea063e0e29475fd9bf7b86"
   revision 3
 
   depends_on "intltool" => :build
@@ -25,6 +25,7 @@ class VirtManager < Formula
   depends_on "python"
   depends_on "spice-gtk"
   depends_on "vte3"
+  depends_on "docutils"
 
   resource "libvirt-python" do
     url "https://libvirt.org/sources/python/libvirt-python-6.10.0.tar.gz"
@@ -94,17 +95,17 @@ class VirtManager < Formula
   end
 end
 __END__
-diff --git a/virt-manager b/virt-manager
-index 15d5109..8ee305a 100755
---- a/virt-manager
-+++ b/virt-manager
-@@ -151,7 +151,8 @@ def parse_commandline():
+diff --git a/virtManager/virtmanager.py b/virtManager/virtmanager.py-patched
+index f6d538b..06b108e
+--- a/virtManager/virtmanager.py
++++ b/virtManager/virtmanager.py-patched
+@@ -137,7 +137,8 @@ def parse_commandline():
          help="Print debug output to stdout (implies --no-fork)",
          default=False)
      parser.add_argument("--no-fork", action="store_true",
 -        help="Don't fork into background on startup")
 +        help="Don't fork into background on startup",
 +        default=True)
-
+ 
      parser.add_argument("--show-domain-creator", action="store_true",
          help="Show 'New VM' wizard")
