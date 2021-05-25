@@ -16,3 +16,8 @@ This fork is for my personal use and shared here for others to waste less time i
 That being sad, I don't have the resources available for general user support. While I gladly accept PR's that solve
 problems that I encounter personally or are reproduced trivially within the confines of my setup, I cannot do this
 for anything else (upstream issues, for example).
+
+
+[homebrew]: http://brew.sh/
+[virt-manager]: https://virt-manager.org/
+[virt-viewer]: https://virt-manager.org/
