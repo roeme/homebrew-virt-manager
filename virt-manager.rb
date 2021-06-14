@@ -19,7 +19,7 @@ class VirtManager < Formula
   depends_on "libvirt"
   depends_on "libvirt-glib"
   depends_on "libxml2" # need python3 bindings
-  depends_on "osinfo-db"
+  depends_on "osinfo-db" # now in homebrew core
   depends_on "py3cairo"
   depends_on "pygobject3"
   depends_on "python"
