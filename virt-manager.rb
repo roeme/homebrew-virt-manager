@@ -28,8 +28,8 @@ class VirtManager < Formula
   depends_on "docutils"
 
   resource "libvirt-python" do
-    url "https://libvirt.org/sources/python/libvirt-python-6.10.0.tar.gz"
-    sha256 "47a8e90d9f49bc0296d2817f6009e18dbb69844ce10b81c2a2672bccd6f49fd5"
+    url "https://libvirt.org/sources/python/libvirt-python-7.4.0.tar.gz"
+    sha256 "384a5273c06013ea4fbaa98069e364c209af390d000f0e206d803634711d0b9a"
   end
 
   resource "idna" do
