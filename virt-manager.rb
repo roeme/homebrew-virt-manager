@@ -37,14 +37,15 @@ class VirtManager < Formula
     sha256 "467fbad99067910785144ce333826c71fb0e63a425657295239737f7ecd125f3"
   end
 
+  # for most users, this will be seldomly relevant, but it's good practice to keep this up-to-date anyway.
   resource "certifi" do
-    url "https://pypi.io/packages/source/c/certifi/certifi-2019.11.28.tar.gz"
-    sha256 "25b64c7da4cd7479594d035c08c2d809eb4aab3a26e5a990ea98cc450c320f1f"
+    url "https://pypi.io/packages/source/c/certifi/certifi-2021.5.30.tar.gz"
+    sha256 "2bbf76fd432960138b3ef6dda3dde0544f27cbf8546c458e60baf371917ba9ee"
   end
 
   resource "chardet" do
-    url "https://pypi.io/packages/source/c/chardet/chardet-3.0.4.tar.gz"
-    sha256 "84ab92ed1c4d4f16916e05906b6b75a6c0fb5db821cc65e70cbd64a3e2a5eaae"
+    url "https://pypi.io/packages/source/c/chardet/chardet-4.0.0.tar.gz"
+    sha256 "0d6f53a15db4120f2b08c94f11e7d93d2c911ee118b6b30a04ec3ee8310179fa"
   end
 
   resource "urllib3" do
