@@ -26,6 +26,9 @@ class VirtManager < Formula
   depends_on "spice-gtk"
   depends_on "vte3"
   depends_on "docutils"
+  
+  # seems to embed stuff, even though it's standalone:
+  depends_on "virt-viewer"
 
   resource "libvirt-python" do
     url "https://libvirt.org/sources/python/libvirt-python-7.4.0.tar.gz"
