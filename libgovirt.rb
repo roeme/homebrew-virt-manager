@@ -17,6 +17,8 @@ class Libgovirt < Formula
 
   # darwin's linker doesn't understand --version-script. google-fu reveals
   # that in most cases this flag is simply commented out then.
+  # Upstream might be willing to accept a patch, but for now let's just work
+  # around this.
   patch :DATA
 
   def install
