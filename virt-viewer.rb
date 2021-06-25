@@ -8,6 +8,7 @@ class VirtViewer < Formula
   depends_on "libtool" => :build
   depends_on "pkg-config" => :build
   depends_on "meson" => :build
+  depends_on "ninja" => :build
 
   depends_on "atk"
   depends_on "cairo"
@@ -24,16 +25,24 @@ class VirtViewer < Formula
   depends_on "shared-mime-info"
   depends_on "spice-gtk"
   depends_on "spice-protocol"
+  depends_on "vte3"
 
   # > 7.0, we need these:
   depends_on "librest"
   depends_on "libgovirt"
 
   
-  # TODO: needs debug, 10.x crashes on big sur
   def install
-    system "meson", "build"
-    system "meson", "install", "--destdir #{prefix}"
+    args = %W[
+      -Dlibvirt=enabled
+      -Dvnc=enabled
+      -Dspice=enabled
+      -Dvte=enabled
+    ]
+    system "meson", "build", *args
+    system "meson", "install", "-C", "build", "--destdir=#{prefix}"
+    bin.install Dir[prefix/"usr/local/bin/virt-*"]
+    bin.install Dir[prefix/"usr/local/bin/remote-viewer"]
   end
 
   def post_install
